@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Risk Detector",
+  "version": "2.0",
+  "description": "Detects webpage privacy risks and potential PII spans.",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest"
+  ],
+
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "<all_urls>"
+  ],
+
+  "background":{
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

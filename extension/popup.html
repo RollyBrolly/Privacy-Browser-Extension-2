@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Breach Detector
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2>
+            Privacy Breach Detector
+        </h2>
+
+        <p>
+            Privacy risk and PII detection
+        </p>
+
+    </header>
+
+
+    <button
+        id="scanButton"
+        type="button"
+    >
+        Scan This Page
+    </button>
+
+
+    <div class="toggle-row">
+
+        <span class="toggle-text">
+            Show full details
+        </span>
+
+        <label class="switch">
+            <input
+                type="checkbox"
+                id="detailToggle"
+                aria-label="Show full details"
+            >
+            <span class="slider"></span>
+        </label>
+
+    </div>
+
+
+    <div id="result">
+
+        <div class="welcome">
+
+            <h3>
+                Ready to scan
+            </h3>
+
+            <p>
+                Click the button to analyze
+                the current webpage.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
